@@ -1,0 +1,190 @@
+* {
+  background: #F3F5FC;
+  box-sizing: border-box;
+}
+
+:root {
+  --regular: 400;
+  --altolinea: 2rem;
+  --fontfamily: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fontfamily);
+}
+
+.logo {
+  margin: 2.5rem 5vw 0 2.5vw; /* Cambiado a unidades relativas */
+  max-width: 100%; /* Para evitar desbordamientos */
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5vw; /* Cambiado a unidades relativas */
+  justify-content: center;
+  padding: 2rem;
+}
+
+.seccion-entrada-texto {
+  margin: 5rem 0 3.938rem 10vw; /* Cambiado a unidades relativas */
+}
+
+.text-area, ::placeholder {
+  font-family: var(--fontfamily);
+  font-weight: var(--regular);
+  font-size: 2rem;
+  resize: none;
+  border: none;
+  color: #0A3871;
+  padding: 0;
+  width: 100%; /* Se ajusta al ancho disponible */
+}
+
+.text-area:focus {
+  outline: none;
+}
+
+.mensaje {
+  font-family: var(--fontfamily);
+  font-weight: var(--regular);
+  font-size: 2rem;
+  background: white;
+  background-image: url("/assets/Muñeco.png");
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position: center;
+  border: none;
+  resize: none;
+  border-radius: 24px;
+  color: #0A3871;
+  outline: none;
+  width: 100%; /* Se ajusta al ancho disponible */
+}
+
+.informacion {
+  display: flex;
+  color: rgba(73, 80, 87, 0.8);
+  font-size: 0.75rem;
+  margin: 0;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.logo-2 {
+  width: 1rem;
+  height: 1rem;
+}
+
+.botones {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1.5rem;
+  flex-wrap: nowrap; /* Permite que los botones se envuelvan */
+}
+
+.btn-desencriptar, .btn-encriptar, .copiar {
+  font-family: var(--fontfamily);
+  font-weight: var(--regular);
+  font-size: 1rem;
+  background: #D8DFE8;
+  border: 1px solid #0A3871;
+  border-radius: 1.5rem;
+  color: #0A3871;
+  cursor: pointer;
+  height: 4.188rem;
+  width: 100%; /* Se ajusta al ancho disponible */
+  max-width: 20.5rem; /* Tamaño máximo */
+}
+
+.copiar, .color-copiar {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-encriptar {
+  background-color: #0A3871;
+  border: 1px solid #0A3871;
+  color: white;
+}
+
+.salida-texto {
+  background-color: white;
+  margin: 0 2.5vw 2.5rem 2.5vw; /* Cambiado a unidades relativas */
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 90vw;
+}
+
+.salida-texto-principal, p, span {
+  background-color: white;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+span {
+  font-size: 1rem;
+}
+
+/* Mejora del diseño responsive */
+@media (max-width: 768px) {
+  main{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .logo {
+    margin: 4.686rem 0 0 2.5vw; /* Cambiado a unidades relativas */
+  }
+
+  .seccion-entrada-texto {
+    margin: 7.25rem 2.5vw 0 2.5vw; /* Cambiado a unidades relativas */
+  }
+
+  .salida-texto {
+    padding: 1rem;
+    margin: 0 2.5vw 2.5rem 2.5vw; /* Cambiado a unidades relativas */
+  }
+
+  .mensaje {
+    margin: 2rem;
+    background-size: contain; /* Asegura que la imagen se ajuste */
+  }
+}
+
+@media (max-width: 375px) {
+  .logo {
+    margin: 1.498rem 0 0 1rem;
+  }
+
+  .seccion-entrada-texto {
+    margin: 5rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .botones {
+    margin: 1rem 1rem 0 1rem;
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+  .salida-texto {
+    margin: 4rem 1rem 1.5rem 1rem;
+    max-width: 100%; /* Se asegura que no desborde */
+  }
+}
